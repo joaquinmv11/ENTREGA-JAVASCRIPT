@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Tasación de Seguros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        select {
+            width: 100%;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #06ec75;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador de Tasación de Seguros</h1>
+    <form id="formSeguro">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required>
+        <label for="genero">Género:</label>
+        <select id="genero">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+        <label for="estadoCivil">Estado Civil:</label>
+        <input type="text" id="estadoCivil" required>
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" required>
+        <label for="historialSeguro">Historial de Seguro:</label>
+        <input type="text" id="historialSeguro" required>
+        
+        <label for="marca">Marca del Vehículo:</label>
+        <input type="text" id="marca" required>
+        <label for="modelo">Modelo del Vehículo:</label>
+        <input type="text" id="modelo" required>
+        <label for="anio">Año del Vehículo:</label>
+        <input type="number" id="anio" required>
+        <label for="valorMercado">Valor de Mercado del Vehículo:</label>
+        <input type="number" id="valorMercado" required>
+        <label for="kilometraje">Kilometraje del Vehículo:</label>
+        <input type="number" id="kilometraje" required>
+        <label for="historialAccidentes">Historial de Accidentes del Vehículo:</label>
+        <input type="text" id="historialAccidentes" required>
+
+        <label for="tipoCobertura">Tipo de Cobertura:</label>
+        <select id="tipoCobertura">
+            <option value="terceros">Terceros</option>
+            <option value="tercerosAmpliado">Terceros Ampliado</option>
+            <option value="todoRiesgo">Todo Riesgo</option>
+        </select>
+
+        <input type="submit" value="Calcular Precio del Seguro">
+    </form>
+    <div id="resultado" class="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
